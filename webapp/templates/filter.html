@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Filter Data - Weather Analysis{% endblock %}
+
+{% block content %}
+<h2>🔍 Filter Weather Data</h2>
+
+<div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin: 30px 0;">
+    <h3>Filter by Temperature Range</h3>
+    <form method="POST" style="margin-top: 20px;">
+        <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">
+                Minimum Temperature (°C):
+            </label>
+            <input type="number" name="min_temp" step="0.1" 
+                   value="{{ min_temp if min_temp else '' }}"
+                   style="padding: 10px; font-size: 1em; border: 2px solid #ddd; border-radius: 5px; width: 200px;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">
+                Maximum Temperature (°C):
+            </label>
+            <input type="number" name="max_temp" step="0.1"
+                   value="{{ max_temp if max_temp else '' }}"
+                   style="padding: 10px; font-size: 1em; border: 2px solid #ddd; border-radius: 5px; width: 200px;">
+        </div>
+        <button type="submit" class="btn">🔍 Search</button>
+    </form>
+</div>
+
+{% if results is not none %}
+<h3>Search Results ({{ results|length }} records found)</h3>
+{% if results %}
+<div style="overflow-x: auto;">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Location</th>
+                <th>Min Temp (°C)</th>
+                <th>Max Temp (°C)</th>
+                <th>Rainfall (mm)</th>
+                <th>Rain Today</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in results %}
+            <tr>
+                <td>{{ record.id }}</td>
+                <td>{{ record.location }}</td>
+                <td>{{ "%.1f"|format(record.min_temp) if record.min_temp else 'N/A' }}</td>
+                <td>{{ "%.1f"|format(record.max_temp) if record.max_temp else 'N/A' }}</td>
+                <td>{{ "%.1f"|format(record.rainfall) if record.rainfall else 'N/A' }}</td>
+                <td>{{ record.rain_today }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<p>No records found matching your criteria. Try different values!</p>
+{% endif %}
+{% endif %}
+{% endblock %}

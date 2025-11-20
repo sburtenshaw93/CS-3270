@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Visualizations - Weather Analysis{% endblock %}
+
+{% block content %}
+<h2>📈 Weather Data Visualizations</h2>
+
+{% if chart_created %}
+<div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin: 30px 0;">
+    <h3>Hot Days vs Cold Days Comparison</h3>
+    <p style="margin: 15px 0;">
+        <strong>Hot Days (>25°C):</strong> {{ hot_count }} records<br>
+        <strong>Cold Days (<15°C):</strong> {{ cold_count }} records
+    </p>
+    <img src="{{ url_for('static', filename='charts/hot_vs_cold.png') }}" 
+         alt="Hot vs Cold Days Chart" 
+         style="width: 100%; max-width: 800px; border-radius: 10px; margin-top: 20px;">
+</div>
+
+{% else %}
+<p>No data available for visualization.</p>
+{% endif %}
+{% endblock %}

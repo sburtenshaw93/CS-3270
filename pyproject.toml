@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sarah-descstats"
+version = "0.1.0"
+description = "Simple descriptive statistics (mean, median, mode, range)."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Sarah Burtenshaw" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "aiofiles>=23.0.0",
+  "matplotib>=3.0.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

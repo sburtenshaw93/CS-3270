@@ -1,0 +1,25 @@
+Doctests for basic summary helpers and iterators
+=================================================
+
+Simple stats helpers from :mod:`core`::
+
+    >>> from core import mean, median, mode, data_range
+    >>> mean([1, 2, 3])
+    2
+    >>> median([1, 3, 2])
+    2
+    >>> isinstance(mode([1,1,2]), (int, float))
+    True
+    >>> data_range([2, 5, 9])
+    7
+
+NumericColumnIterator and summarize_columns from :mod:`data_processor`::
+
+    >>> from data_processor import NumericColumnIterator, summarize_columns
+    >>> from models import WeatherRecord
+    >>> rows = [WeatherRecord({"A": "1", "B": "x"}), WeatherRecord({"A": "2", "B": "3"})]
+    >>> list(NumericColumnIterator(rows, "A"))
+    [1.0, 2.0]
+    >>> summary = summarize_columns(rows, ["A","B"])
+    >>> isinstance(summary.stats_by_column["A"].mean, float) or summary.stats_by_column["A"].mean is None
+    True

@@ -1,0 +1,163 @@
+{
+  "row ID": {
+    "mean": null,
+    "median": null,
+    "mode": null,
+    "data_range": null,
+    "count": 0
+  },
+  "Location": {
+    "mean": null,
+    "median": null,
+    "mode": null,
+    "data_range": null,
+    "count": 0
+  },
+  "MinTemp": {
+    "mean": 12.176265985687321,
+    "median": 12.0,
+    "mode": 11.0,
+    "data_range": 42.4,
+    "count": 99073
+  },
+  "MaxTemp": {
+    "mean": 23.21851318413472,
+    "median": 22.6,
+    "mode": 20.0,
+    "data_range": 52.2,
+    "count": 99286
+  },
+  "Rainfall": {
+    "mean": 2.353023737276353,
+    "median": 0.0,
+    "mode": 0.0,
+    "data_range": 371.0,
+    "count": 98537
+  },
+  "Evaporation": {
+    "mean": 5.461319645520751,
+    "median": 4.8,
+    "mode": 4.0,
+    "data_range": 86.2,
+    "count": 56985
+  },
+  "Sunshine": {
+    "mean": 7.615090327400908,
+    "median": 8.4,
+    "mode": 0.0,
+    "data_range": 14.5,
+    "count": 52199
+  },
+  "WindGustDir": {
+    "mean": null,
+    "median": null,
+    "mode": null,
+    "data_range": null,
+    "count": 0
+  },
+  "WindGustSpeed": {
+    "mean": 39.97696590567092,
+    "median": 39.0,
+    "mode": 35.0,
+    "data_range": 129.0,
+    "count": 93036
+  },
+  "WindDir9am": {
+    "mean": null,
+    "median": null,
+    "mode": null,
+    "data_range": null,
+    "count": 0
+  },
+  "WindDir3pm": {
+    "mean": null,
+    "median": null,
+    "mode": null,
+    "data_range": null,
+    "count": 0
+  },
+  "WindSpeed9am": {
+    "mean": 14.00484880453637,
+    "median": 13.0,
+    "mode": 9.0,
+    "data_range": 130.0,
+    "count": 98581
+  },
+  "WindSpeed3pm": {
+    "mean": 18.65046426633634,
+    "median": 19.0,
+    "mode": 17.0,
+    "data_range": 87.0,
+    "count": 97681
+  },
+  "Humidity9am": {
+    "mean": 68.86637567025834,
+    "median": 70.0,
+    "mode": 99.0,
+    "data_range": 100.0,
+    "count": 98283
+  },
+  "Humidity3pm": {
+    "mean": 51.43329553654262,
+    "median": 52.0,
+    "mode": 52.0,
+    "data_range": 100.0,
+    "count": 97010
+  },
+  "Pressure9am": {
+    "mean": 1017.6846381784155,
+    "median": 1017.7,
+    "mode": 1016.4,
+    "data_range": 60.5,
+    "count": 89768
+  },
+  "Pressure3pm": {
+    "mean": 1015.2862042214301,
+    "median": 1015.3,
+    "mode": 1015.3,
+    "data_range": 61.399999999999864,
+    "count": 89780
+  },
+  "Cloud9am": {
+    "mean": 4.447985277024409,
+    "median": 5.0,
+    "mode": 7.0,
+    "data_range": 9.0,
+    "count": 61944
+  },
+  "Cloud3pm": {
+    "mean": 4.519121551231643,
+    "median": 5.0,
+    "mode": 7.0,
+    "data_range": 9.0,
+    "count": 59514
+  },
+  "Temp9am": {
+    "mean": 16.970041050737095,
+    "median": 16.7,
+    "mode": 17.0,
+    "data_range": 47.2,
+    "count": 98902
+  },
+  "Temp3pm": {
+    "mean": 21.68134040896611,
+    "median": 21.1,
+    "mode": 18.5,
+    "data_range": 51.800000000000004,
+    "count": 97612
+  },
+  "RainToday": {
+    "mean": null,
+    "median": null,
+    "mode": null,
+    "data_range": null,
+    "count": 0
+  },
+  "RainTomorrow": {
+    "mean": 0.22467743880381044,
+    "median": 0.0,
+    "mode": 0.0,
+    "data_range": 1.0,
+    "count": 99516
+  }
+}

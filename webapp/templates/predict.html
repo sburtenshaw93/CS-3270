@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Rain Prediction - Weather Analysis{% endblock %}
+
+{% block content %}
+<h2>Machine Learning Rain Prediction</h2>
+
+<h3>Enter Today's Weather Conditions:</h3>
+<form method="POST" style="background: #f8f9fa; padding: 30px; border-radius: 10px; max-width: 600px;">
+    <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Location:</label>
+        <select name="location" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 1em;">
+            <option value="Sydney">Sydney</option>
+            <option value="Melbourne">Melbourne</option>
+            <option value="Brisbane">Brisbane</option>
+            <option value="Perth">Perth</option>
+            <option value="Adelaide">Adelaide</option>
+            <option value="Canberra">Canberra</option>
+            <option value="Hobart">Hobart</option>
+            <option value="Darwin">Darwin</option>
+        </select>
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Minimum Temperature (°C):</label>
+        <input type="number" name="min_temp" step="0.1" required 
+               style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 1em;"
+               placeholder="e.g., 15.5">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Maximum Temperature (°C):</label>
+        <input type="number" name="max_temp" step="0.1" required 
+               style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 1em;"
+               placeholder="e.g., 25.0">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Rainfall Today (mm):</label>
+        <input type="number" name="rainfall" step="0.1" required 
+               style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 1em;"
+               placeholder="e.g., 5.0">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Did it Rain Today?</label>
+        <select name="rain_today" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 1em;">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+    </div>
+    
+    <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">
+        Predict Rain Tomorrow
+    </button>
+</form>
+
+{% if result %}
+<div style="margin-top: 40px; padding: 30px; border-radius: 10px; 
+            {% if result.prediction == 'Yes' %}
+                background: linear-gradient(135deg, #1a3353ff 0%, #06060cff 100%); color: white;
+            {% else %}
+                background: linear-gradient(135deg, #1a3353ff 0%, #06060cff 100%); color: white;
+            {% endif %}
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+    
+    <h2 style="margin-top: 0; color: white; font-size: 2em;">
+        {% if result.prediction == 'Yes' %}
+            Rain Expected Tomorrow
+        {% else %}
+            ☀️ No Rain Expected Tomorrow
+        {% endif %}
+    </h2>
+    
+    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h3 style="color: white; margin-top: 0;">Prediction Details:</h3>
+        <div style="font-size: 1.2em; line-height: 2;">
+            <p><strong>Prediction:</strong> {{ result.prediction }}</p>
+            <p><strong>Confidence:</strong> {{ "%.1f"|format(result.confidence) }}%</p>
+            <p><strong>Rain Probability:</strong> {{ "%.1f"|format(result.rain_probability) }}%</p>
+            <p><strong>No Rain Probability:</strong> {{ "%.1f"|format(result.no_rain_probability) }}%</p>
+        </div>
+    </div>
+    
+    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 8px;">
+        <h3 style="color: white; margin-top: 0;">Input Conditions:</h3>
+        <div style="font-size: 1.1em; line-height: 1.8;">
+            <p><strong>Location:</strong> {{ result.inputs.location }}</p>
+            <p><strong>Min Temp:</strong> {{ result.inputs.min_temp }}°C</p>
+            <p><strong>Max Temp:</strong> {{ result.inputs.max_temp }}°C</p>
+            <p><strong>Rainfall:</strong> {{ result.inputs.rainfall }}mm</p>
+            <p><strong>Rain Today:</strong> {{ result.inputs.rain_today }}</p>
+        </div>
+    </div>
+    
+    <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">
+        This prediction is based on historical weather patterns and has an 80.74% accuracy rate.
+    </p>
+</div>
+{% endif %}
+
+<div style="text-align: center; margin-top: 40px;">
+    <a href="/" class="btn">← Back to Home</a>
+</div>
+{% endblock %}

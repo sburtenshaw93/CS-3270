@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Statistics - Weather Analysis{% endblock %}
+
+{% block content %}
+<h2>📊 Database Statistics</h2>
+
+{% if stats %}
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>📝 Total Records</h3>
+        <div class="value">{{ stats['total_records'] }}</div>
+    </div>
+    <div class="stat-card">
+        <h3>🌡️ Avg Max Temp</h3>
+        <div class="value">{{ "%.2f"|format(stats['avg_max_temp']) }}°C</div>
+    </div>
+    <div class="stat-card">
+        <h3>❄️ Avg Min Temp</h3>
+        <div class="value">{{ "%.2f"|format(stats['avg_min_temp']) }}°C</div>
+    </div>
+    <div class="stat-card">
+        <h3>🌧️ Total Rainfall</h3>
+        <div class="value">{{ "%.1f"|format(stats['total_rainfall']) }}mm</div>
+    </div>
+    <div class="stat-card">
+        <h3>🔥 Highest Temp</h3>
+        <div class="value">{{ "%.1f"|format(stats['max_temp_ever']) }}°C</div>
+    </div>
+    <div class="stat-card">
+        <h3>🥶 Lowest Temp</h3>
+        <div class="value">{{ "%.1f"|format(stats['min_temp_ever']) }}°C</div>
+    </div>
+</div>
+
+{% else %}
+<p>No statistics available. Make sure the database has data!</p>
+{% endif %}
+{% endblock %}

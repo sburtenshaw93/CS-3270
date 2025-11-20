@@ -1,0 +1,139 @@
+2025-09-23 07:16:02,422 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-12/test_main_integration0/dist/summary.json
+2025-09-23 07:16:09,640 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-13/test_main_integration0/dist/summary.json
+2025-09-23 07:21:14,617 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-14/test_main_integration0/dist/summary.json
+2025-09-23 07:21:14,839 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-15/test_main_integration0/dist/summary.json
+2025-09-23 07:21:15,078 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-16/test_main_integration0/dist/summary.json
+2025-09-23 07:37:16,328 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-17/test_main_integration0/dist/summary.json
+2025-09-23 07:37:28,820 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-18/test_main_integration0/dist/summary.json
+2025-09-23 07:40:50,753 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-19/test_main_integration0/dist/summary.json
+2025-09-23 07:40:50,979 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-20/test_main_integration0/dist/summary.json
+2025-09-23 07:40:51,230 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-21/test_main_integration0/dist/summary.json
+2025-09-23 07:59:52,605 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-22/test_main_integration0/dist/summary.json
+2025-09-23 07:59:52,825 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-23/test_main_integration0/dist/summary.json
+2025-09-23 07:59:53,069 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-24/test_main_integration0/dist/summary.json
+2025-10-08 20:28:31,471 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/dist/summary.json
+2025-10-08 20:28:31,510 ERROR __main__ Failed to create visualizations: unsupported operand type(s) for +: 'float' and 'type'
+Traceback (most recent call last):
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/main.py", line 107, in main
+    viz_results = analyze_and_visualize(records, str(charts_dir))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/data_visualizer.py", line 252, in analyze_and_visualize
+    hot_cold_stats = plot_hot_vs_cold_comparison(records, hot_cold_path)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/data_visualizer.py", line 121, in plot_hot_vs_cold_comparison
+    average_hot = calculate_average_temp(hot_temps) if hot_temps else 0
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/data_visualizer.py", line 100, in calculate_average_temp
+    total = reduce(lambda sum_so_far, temp: sum_so_far + temp, temperatures, 0.0)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/data_visualizer.py", line 100, in <lambda>
+    total = reduce(lambda sum_so_far, temp: sum_so_far + temp, temperatures, 0.0)
+                                            ~~~~~~~~~~~^~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'type'
+2025-10-08 20:30:48,784 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/dist/summary.json
+2025-10-08 20:30:50,078 ERROR __main__ Failed to create visualizations: range() takes no keyword arguments
+Traceback (most recent call last):
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/main.py", line 107, in main
+    viz_results = analyze_and_visualize(records, str(charts_dir))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/data_visualizer.py", line 256, in analyze_and_visualize
+    rainy_dry_stats = plot_rainy_vs_dry_comparison(records, rainy_dry_path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/data_visualizer.py", line 209, in plot_rainy_vs_dry_comparison
+    ax2.plot(range(len(rainy_temps),
+            ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: range() takes no keyword arguments
+2025-10-08 20:33:34,521 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/dist/summary.json
+2025-10-08 20:33:35,082 ERROR __main__ Failed to create visualizations: range() takes no keyword arguments
+Traceback (most recent call last):
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/main.py", line 107, in main
+    viz_results = analyze_and_visualize(records, str(charts_dir))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/data_visualizer.py", line 256, in analyze_and_visualize
+    rainy_dry_stats = plot_rainy_vs_dry_comparison(records, rainy_dry_path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/src/data_visualizer.py", line 209, in plot_rainy_vs_dry_comparison
+    ax2.plot(range(len(rainy_temps),
+            ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: range() takes no keyword arguments
+2025-10-08 20:35:35,376 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/dist/summary.json
+2025-10-08 21:34:06,663 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-1/test_main_integration0/dist/summary.json
+2025-10-08 21:36:03,997 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/dist/summary.json
+2025-10-13 13:54:52,968 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-6-Phase-6/dist/summary.json
+2025-10-20 15:51:14,217 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 21:01:39,179 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 21:01:53,821 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 21:01:55,036 ERROR data_store Failed to write summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+Traceback (most recent call last):
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/src/data_store.py", line 49, in async_save_summary
+    async with aiofiles.open('w', encoding='utf-8') as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Library/Python/3.12/lib/python/site-packages/aiofiles/base.py", line 73, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Library/Python/3.12/lib/python/site-packages/aiofiles/base.py", line 69, in __await__
+    self._obj = yield from self._coro.__await__()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Library/Python/3.12/lib/python/site-packages/aiofiles/threadpool/__init__.py", line 93, in _open
+    f = await loop.run_in_executor(executor, cb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'w'
+2025-10-20 21:01:55,038 ERROR __main__ Failed during async save operations: %s, e
+Traceback (most recent call last):
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/src/main.py", line 172, in main_async
+    out_path, viz_results = await asyncio.gather(
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/src/data_visualizer.py", line 480, in async_analyze_and_visualize
+    print(f"   - Hot Days (>25°C): {hot_cold_stats['hot_day_count']}")
+                                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: 'coroutine' object is not subscriptable
+2025-10-20 21:10:52,208 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 21:10:53,690 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 21:37:42,205 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 21:37:49,404 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 21:42:39,723 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 21:42:46,785 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:20:22,605 ERROR __main__ Failed to save summary: 'NoneType' object has no attribute 'stats_by_column'
+Traceback (most recent call last):
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/src/main.py", line 93, in main_sync
+    out_path = FileStore(OUT_PATH).save_summary(summary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/src/data_store.py", line 27, in save_summary
+    payload = {col: stats.asdict() for col, stats in summary.stats_by_column.items()}
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'stats_by_column'
+2025-10-20 22:23:35,811 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:23:43,908 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 22:23:45,414 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:23:54,456 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 22:23:55,943 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:24:03,661 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 22:24:05,195 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:27:30,316 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:27:37,631 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 22:27:39,101 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:27:47,586 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 22:27:54,430 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:36:29,272 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 22:36:30,743 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:36:33,757 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 22:36:35,647 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 22:36:42,680 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 23:02:11,244 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 23:02:12,704 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 23:02:15,463 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-10-20 23:02:17,424 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-10-20 23:02:24,340 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-7-Phase-7/dist/summary.json
+2025-11-19 21:43:01,645 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-11-19 21:43:05,031 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-8/test_main_integration0/dist/summary.json
+2025-11-19 21:45:28,212 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-11-19 21:45:31,390 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-9/test_main_integration0/dist/summary.json
+2025-11-19 21:49:00,650 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-11-19 21:49:03,574 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-10/test_main_integration0/dist/summary.json
+2025-11-19 21:52:22,200 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-11-19 21:52:25,239 INFO data_store Wrote summary to /private/var/folders/vl/ctlz3skd2c30qbpxdp_r128h0000gn/T/pytest-of-sarahburtenshaw/pytest-11/test_main_integration0/dist/summary.json
+2025-11-20 09:59:28,298 INFO data_fetcher Successfully read %d records from %s, len(records), path
+2025-11-20 09:59:31,531 INFO data_store Wrote summary to /Users/sarahburtenshaw/Documents/UVU/7.Fall Semester 2025/CS-3270/Module-11/dist/summary.json
